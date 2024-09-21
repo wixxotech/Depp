@@ -71,11 +71,11 @@ def smsgb(number):
                 "payload": {"user_id": number},
                 "headers": {"Content-Type": "application/json"}
             },
-            {
-                "url": "https://api.gromoinsure.com/v1/auth/sendOTP",
-                "payload": {"phone": number},
-                "headers": {"Content-Type": "application/json"}
-            },
+         #   {
+         #       "url": "https://api.gromoinsure.com/v1/auth/sendOTP",
+         #       "payload": {"phone": number},
+         #       "headers": {"Content-Type": "application/json"}
+         #   },
             {
                 "url": "https://omni-api.moreretail.in/api/v1/login/",
                 "payload": {"phone_number": number, "hash_key": "XfsoCeXADQA"},
